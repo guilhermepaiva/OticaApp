@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  get 'accounts/new'
+
+  get 'accounts/create'
+
+  resources :accounts
+
   devise_for :users
+
   get 'pages/home'
 
   root "pages#home"
