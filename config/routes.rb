@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   constraints(SubdomainPresent) do
     devise_for :users
+    resources :products
     root 'products#index', as: :subdomain_root
   end
 
