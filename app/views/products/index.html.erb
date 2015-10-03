@@ -2,4 +2,18 @@
 
 <h1>Lista de Produtos</h1>
 
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Preco</th>
+  </tr>
+ 
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.brand %></td>
+      <td><%= product.price %></td>
+    </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Adicionar Novo Produto', new_product_path %>
