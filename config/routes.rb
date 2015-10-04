@@ -12,6 +12,8 @@ end
 
 Rails.application.routes.draw do
 
+  resources :attendances
+  resources :clients
   constraints(SubdomainPresent) do
     devise_for :users
     resources :products
