@@ -19,7 +19,7 @@
       
       <% if user_signed_in? %>
       
-        <li><a href="#">Consultar Estoque</a></li>
+        <li><%= link_to "Consultar Estoque", products_path %></li>
         <li><a href="#">Realizar Venda</a></li>
         <li><%= link_to "Sair", destroy_user_session_path, method: :delete %>
       <% end %>
