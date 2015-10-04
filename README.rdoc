@@ -1,6 +1,8 @@
 == README
 Adicionei essa linha on readme e vou colocar um comentário em layout/application.html.erb
 
+Teste de Pull Request
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
