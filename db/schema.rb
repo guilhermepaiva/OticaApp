@@ -54,10 +54,10 @@ ActiveRecord::Schema.define(version: 20151004142718) do
     t.integer  "size"
     t.string   "reference"
     t.string   "gender"
-    t.string   "type"
+    t.string   "product_type"
     t.decimal  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

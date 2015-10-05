@@ -3,7 +3,7 @@ class Account < ActiveRecord::Base
 
   belongs_to :owner, class_name: 'User'
 
-  has_many :products
+  #has_many :products
 
   validates :subdomain, presence: true,
                         uniqueness: { case_sensitive: false },
