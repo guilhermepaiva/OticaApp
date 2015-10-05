@@ -1,3 +1,4 @@
+<div class="col-xs-2">
 <%= simple_form_for(@product) do |f| %>
   <%= f.error_notification %>
 
@@ -11,6 +12,10 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %><br><br>
+  </div>
+  <div>
+    <%= link_to 'Voltar', products_path, class: "btn btn-primary btn-sm" %>
   </div>
 <% end %>
+</div>
