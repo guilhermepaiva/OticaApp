@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(version: 20151004142718) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "attendances", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "client_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "clients", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
@@ -42,12 +35,15 @@ ActiveRecord::Schema.define(version: 20151004142718) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer  "user_id"
     t.integer  "product_id"
-    t.integer  "attendance_id"
+    t.integer  "client_id"
     t.integer  "quantity"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  add_index "orders", ["user_id", "product_id", "client_id"], name: "index_orders_on_user_id_and_product_id_and_client_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "brand"
