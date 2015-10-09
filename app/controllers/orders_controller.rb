@@ -5,5 +5,9 @@ class OrdersController < ApplicationController
     @client = Client.find(params[:client])
     
   end
+  def choose_products
+    @products = Product.all
+  end
+  
   
 end

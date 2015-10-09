@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :clients
     resources :orders
     root 'products#index', as: :subdomain_root
+    get 'choose', to: 'orders#choose_products'
   end
 
   constraints(SubdomainBlank) do
