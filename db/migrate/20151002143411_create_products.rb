@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :size
       t.string :reference
       t.string :gender
-      t.string :type
+      t.string :product_type
       t.decimal :price
 
       t.timestamps null: false
