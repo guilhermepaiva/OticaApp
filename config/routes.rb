@@ -12,13 +12,15 @@ end
 
 Rails.application.routes.draw do
 
-
-  resources :attendances
-  resources :clients
   constraints(SubdomainPresent) do
     devise_for :users
     resources :products
+    resources :clients
+    resources :orders
+    resources :attendances
+    resources :clients
     root 'products#index', as: :subdomain_root
+    get 'choose', to: 'orders#choose_products'
   end
 
   constraints(SubdomainBlank) do
