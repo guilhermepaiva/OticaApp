@@ -20,4 +20,33 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+devise:
+  confirmations:
+   new:
+    title: Reenviar instruções de confirmação
+    submit: Reenviar instruções de confirmação
+
+activerecord:
+   models:
+    user: "Usuario"
+    account: "Conta"
+    product: "Produto"
+    client: "Cliente"
+   attributes:
+    user:
+     email: "E-mail"
+     password: "Senha"
+     password_confirmation: "Confirmar Senha"
+     current_password: "Senha Atual"
+     remember_me: "Lembrar de mim"
+    account:
+     subdomain: "Subdominio"
+     company_name: "Nome da Otica"
+
+forms:
+   messages:
+    success: "sucesso"
+   buttons:
+    edit: "Editar"
+    submit: "Criar"

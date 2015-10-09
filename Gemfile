@@ -16,6 +16,8 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 gem 'apartment'
+gem 'i18n'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'byebug'

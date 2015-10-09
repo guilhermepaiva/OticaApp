@@ -12,6 +12,7 @@ end
 
 Rails.application.routes.draw do
 
+
   resources :attendances
   resources :clients
   constraints(SubdomainPresent) do
