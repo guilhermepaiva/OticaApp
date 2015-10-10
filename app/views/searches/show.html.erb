@@ -1,0 +1,14 @@
+<h1>Resultado da Busca</h1>
+
+<% if @search.search_products.empty? %>
+	<p>Não foi encontrado nenhum resultado com os parâmetros informados.</p>
+<% else %>
+	<% @search.search_products.each do |c| %>
+		<div>
+			<h4><%= c.brand %></h4>
+			<p>Preço: R$ <%= c.price %></p>
+			<p>Gênero: <%= c.gender %></p>
+			<p>Tipo: <%= c.product_type %></p>
+		</div>
+	<% end %>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  gender: MyString
+  product_type: MyString
+  min_price: 9.99
+  max_price: 9.99
+
+two:
+  brand: MyString
+  gender: MyString
+  product_type: MyString
+  min_price: 9.99
+  max_price: 9.99
