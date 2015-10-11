@@ -1,28 +1,37 @@
+<div class="form-horizontal">
 <h1>Busca Avançada</h1>
+
 
 <%= form_for @search do |s| %>
 
-	<div class="field">
-		<%= s.label :keywords %><br />
+	<div class="input-group">
+		<%= s.label :keywords, class: "col-sm-2 control-label" %><br />
 		<%= s.text_field :keywords %>
- 	 </div>
-  	<div class="field">
-		<%= s.label :brand %>
+ 	</div>
+
+ 	<div class="form-group">
+		<%= s.label :brand, class: "col-sm-2 control-label" %>
 		<%= s.text_field :brand %>
 	</div>
-	<div class="field">
-		<%= s.label :gender %>
+
+	<div class="form-group">
+		<%= s.label :gender, class: "col-sm-2 control-label" %>
 		<%= s.select :gender, options_for_select(@genders), :include_blank => true %>
-	</div>
-	<div class="field">
-		<%= s.label :product_type %>
+	</div>	
+
+	<div class="form-group">
+		<%= s.label :product_type, class: "col-sm-2 control-label" %>
 		<%= s.select :product_type, options_for_select(@product_types), :include_blank => true %>
 	</div>
-	<div class="field">
-		<%= s.label :min_price, "Faixa de Preço" %><br />
+
+	<div class="form-group">
+		<%= s.label :min_price, "Faixa de Preço", class: "col-sm-2 control-label" %><br />
 		<%= s.text_field :min_price, size: 10 %> -
 	    <%= s.text_field :max_price, size: 10 %>
 	</div>
-	<div class="actions"><%= s.submit "Buscar" %></div>
+
+	<%= s.submit "Buscar", class: "btn btn-default" %>
 
 <% end %>
+
+</div>

@@ -32,8 +32,11 @@
 </table>
 </div>
 
-
-<%= link_to 'Adicionar Novo Produto', new_product_path, class: "btn btn-primary" %><br><br>
-<%= link_to "Busca Avançada", new_search_path %>
+<div class="row">
+  <div class="col-lg-6">
+  <%= link_to 'Adicionar Novo Produto', new_product_path, class: "btn btn-link btn-sm" %><br><br>
+  <%= link_to "Busca Avançada", new_search_path, class: "btn btn-link btn-sm" %>
+  </div>
+</div>
 
 </div>
