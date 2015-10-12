@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     resources :orders
     resources :attendances
     resources :clients
+    resources :searches
+
     root 'products#index', as: :subdomain_root
     get 'choose', to: 'orders#choose_products'
   end
