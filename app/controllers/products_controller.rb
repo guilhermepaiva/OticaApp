@@ -4,13 +4,19 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    #@products = Product.all
     #@products = Product.where([ 'brand LIKE ? , “%#{params[:search]}%”'])
+    if params[:search]
+      @products = Product.search(params[:search])
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @products = Product.search(params[:search])
   end
 
   # GET /products/new

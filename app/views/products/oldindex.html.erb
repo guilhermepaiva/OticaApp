@@ -1,9 +1,5 @@
-<%= form_tag(products_path, :method =>'get', id: "search-form") do %>
-	<%= text_field_tag :search, params[:search], placeholder: "digite a marca ou o gênero" %>
-	<%= submit_tag "Filtrar" %>
-<% end %>
+<p id="notice"><%= notice %></p>
 
-<% if @products.present? %>
 <div class="panel panel-default">
 <div class="panel-heading"><h1 class="text-center">Estoque</h1></div>
 
@@ -29,7 +25,7 @@
       <td><%= product.gender %></td>
       <td><%= product.product_type %></td>
       <td>R$ <%= product.price %></td>
-      <td><p class="btn btn-default"><%= link_to "Detalhes", product %></p></td>
+      <td><p class="btn btn-default"><%= link_to "Exibir", product %></p></td>
     </tr>
   <% end %>
 </tbody>
@@ -38,14 +34,9 @@
 
 <div class="row">
   <div class="col-lg-6">
-  	<%= link_to 'Adicionar Novo Produto', new_product_path, class: "btn btn-link btn-sm" %><br><br>
-  	<%= link_to 'Ver estoque completo', products_path %>
+  <%= link_to 'Adicionar Novo Produto', new_product_path, class: "btn btn-link btn-sm" %><br><br>
+  <%= link_to "Busca Avançada", new_search_path, class: "btn btn-link btn-sm" %>
   </div>
 </div>
 
 </div>
-
-<% else %>
-  <p>Nenhum resultado com os parâmetros <%= params[:search] %></p>
-  <%= link_to 'Ver estoque completo', products_path %>
-<% end %>

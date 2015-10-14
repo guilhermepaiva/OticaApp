@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% if @products.present? %>
 <div class="panel panel-default">
   <div class="panel-heading"><h1 class="text-center">Detalhes do Produto</h1></div>
   <div class="panel-body">
@@ -40,3 +41,8 @@
   </div>
 
 </div>
+
+<% else %>
+  <p>Nenhum resultado com os parâmetros <%= params[:search] %></p>
+
+<% end %>

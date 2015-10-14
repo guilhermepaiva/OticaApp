@@ -1,5 +1,9 @@
 class SearchesController < ApplicationController
 
+  def index
+    @search = Search.search_products
+  end
+
   def new
     @search = Search.new
   	@genders = Product.uniq.pluck(:gender)
@@ -8,7 +12,7 @@ class SearchesController < ApplicationController
 
   def create
   	#@search = Search.create(search_params)
-    @search = Search.search_products(params[:search])
+    @search = Search.search_products(search_params)
   		redirect_to @search
   end
 
