@@ -1,5 +1,7 @@
 class Search < ActiveRecord::Base
 
+	belongs_to :product
+
 	def search_products
 
 			products = Product.all

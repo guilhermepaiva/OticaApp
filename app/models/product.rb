@@ -5,4 +5,6 @@ class Product < ActiveRecord::Base
   has_many :clients, through: :orders
   has_many :users, through: :orders
   #has_many :attendance, through: :orders
+
+  has_many :searches
 end
