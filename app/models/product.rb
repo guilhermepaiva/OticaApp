@@ -7,10 +7,8 @@ class Product < ActiveRecord::Base
   #has_many :attendance, through: :orders
 
 
-  def self.search(query)
-    return scoped unless query.present?
-  	where("brand LIKE ? OR gender LIKE ?", "%#{query}%", "%#{query}%")
-  	#where("gender LIKE ?", "%#{query}%")
+  def self.search(query_brand)
+  	where("brand LIKE ?", "%#{query_brand}%")
   end
   #this will work in development with SQLite. If you switch to PostgreSQL in production, you may need to change  LIKE to  ILIKE.
 end
