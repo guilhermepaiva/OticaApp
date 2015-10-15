@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     @products = Product.where(nil) # cria um scope anônimo (todos os produtos)
     @products = @products.gender(params[:gender]) if params[:gender].present?
     @products = @products.brand(params[:brand]) if params[:brand].present?
-    @products = @products.reference(params[:reference]) if params[:reference].present?
+    @products = @products.reference(params[:product_type]) if params[:product_type].present?
     @products = @products.price_max(params[:price_max]) if params[:price_max].present?
     @products = @products.price_min(params[:price_min]) if params[:price_min].present?
     
