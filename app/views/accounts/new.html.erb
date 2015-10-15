@@ -5,38 +5,47 @@
 		<%= form_for @account do |f| %>
 
 			<%= form_group_for f, :company_name do %>
+			  <%= f.label :company_name, "Nome da Ótica" %>
 	          <%= f.text_field :company_name, class: 'form-control' %>
 	      	<% end %>
 
 			<%= form_group_for f, :cnpj do %>
+			  <%= f.label :cnpj, "CNPJ" %>
 	          <%= f.text_field :cnpj, class: 'form-control' %>
 	      	<% end %>
 
 			<%= f.fields_for :owner do |o| %>
 
 				<%= form_group_for o, :name do %>
+					<%= o.label :name, "Nome do dono ou responsável" %>
 					<%= o.text_field :name, class: 'form-control'%>
 				<% end %>
 
 				<%= form_group_for o, :email do %>
+					<%= o.label :email, "Email do dono ou responsável" %>
 					<%= o.text_field :email, class: 'form-control'%>
 				<% end %>
 
 				<%= form_group_for o, :password do %>
+					<%= o.label :password, "Cadastre uma senha" %>
 					<%= o.password_field :password, class: 'form-control'%>
 				<% end %>
 
 				<%= form_group_for o, :password_confirmation do %>
+					<%= o.label :password_confirmation, "Confirme a senha" %>
 					<%= o.password_field :password_confirmation, class: 'form-control'%>
 				<% end %>
 
 			<% end %>
 
 			<%= form_group_for f, :subdomain do %>
+
+	          <%= f.label :subdomain, "Subdomínio" %>
 	        <div class="input-group">
-	          <%= f.text_field :subdomain, class: 'form-control' %>
+	          <%= f.text_field :subdomain, placeholder: "Exemplo: oticagravata", class: 'form-control' %>
 	          <span class="input-group-addon">.otk.com.br</span>
 	        </div>
+	          <p>(O subdomínio será o nome da ótica sem espaços, acentos e cedilha)</p>
 	      	<% end %>
 
 	      	<%= f.submit "Criar Conta", class: 'btn btn-primary' %>
