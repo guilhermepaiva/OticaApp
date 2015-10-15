@@ -5,10 +5,13 @@ class Product < ActiveRecord::Base
   has_many :clients, through: :orders
   has_many :users, through: :orders
   #has_many :attendance, through: :orders
-
-
-  def self.search(query_brand, query_gender)
-  	where("brand LIKE ? AND gender LIKE ?", "%#{query_brand}%", "%#{query_gender}%")
-  end
-  #this will work in development with SQLite. If you switch to PostgreSQL in production, you may need to change  LIKE to  ILIKE.
+  
+  #Definindo os scopes.
+  #Cada scope pode ser chamado como um método no controller
+  scope :gender, -> (gender) { where("gender like ?", "#{gender}%") }
+  scope :reference, -> (reference) { where("reference like ?", "#{reference}%") }
+  scope :brand, -> (brand) { where("brand like ?", "#{brand}%")}
+  scope :price_max, -> (price_max) { where("price <= ?", "#{price_max}")}
+  scope :price_min, -> (price_min) { where("price >= ?", "#{price_min}")}
+  
 end

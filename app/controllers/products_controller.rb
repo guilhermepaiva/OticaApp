@@ -4,19 +4,19 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    #@products = Product.all
-    #@products = Product.where([ 'brand LIKE ? , “%#{params[:search]}%”'])
-    if (params[:brand] || params[:gender])
-      @products = Product.search(params[:brand], params[:gender])  
-    else
-      @products = Product.all
-    end
+    @products = Product.where(nil) # cria um scope anônimo (todos os produtos)
+    @products = @products.gender(params[:gender]) if params[:gender].present?
+    @products = @products.brand(params[:brand]) if params[:brand].present?
+    @products = @products.reference(params[:reference]) if params[:reference].present?
+    @products = @products.price_max(params[:price_max]) if params[:price_max].present?
+    @products = @products.price_min(params[:price_min]) if params[:price_min].present?
+    
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @products = Product.search(params[:search])
+    @products = Product.find(params[:id])
   end
 
   # GET /products/new
