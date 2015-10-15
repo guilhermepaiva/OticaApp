@@ -1,14 +1,13 @@
-
 <%= form_tag(products_path, :method =>'get', id: "search-form") do %>
 <div class="input-group">
-	<%= text_field_tag :search, params[:search], placeholder: "digite a marca", class: "form-control" %>
+	<%= text_field_tag :brand, params[:brand], placeholder: "digite a marca", class: "form-control" %>
+  <%= text_field_tag :gender, params[:gender], placeholder: "digite o gênero", class: "form-control" %>
   <span class="input-group-btn">
 	<%= submit_tag "Filtar", class: 'btn btn-primary' %>
 </span>
-
 </div>
 <% end %>
-
+<br>
 
 <% if @products.present? %>
 <div class="panel panel-default">
