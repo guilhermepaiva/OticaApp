@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
     #@products = Product.all
     #@products = Product.where([ 'brand LIKE ? , “%#{params[:search]}%”'])
-    if params[:search]
+    if (params[:brand] || params[:gender])
       @products = Product.search(params[:brand], params[:gender])  
     else
       @products = Product.all
