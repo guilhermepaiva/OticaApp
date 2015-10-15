@@ -1,7 +1,11 @@
 <%= form_tag(products_path, :method =>'get', id: "search-form") do %>
 <div class="input-group">
 	<%= text_field_tag :brand, params[:brand], placeholder: "digite a marca", class: "form-control" %>
-  <%= text_field_tag :gender, params[:gender], placeholder: "digite o gênero", class: "form-control" %>
+  	<%= text_field_tag :gender, params[:gender], placeholder: "digite o gênero", class: "form-control" %>
+	<%= text_field_tag :reference, params[:reference], placeholder: "digite a referência", class: "form-control" %>
+  	<%= text_field_tag :price_max, params[:price_max], placeholder: "digite o preço máximo", class: "form-control" %>
+	<%= text_field_tag :price_min, params[:price_min], placeholder: "digite o preço mínimo", class: "form-control" %>
+
   <span class="input-group-btn">
 	<%= submit_tag "Filtar", class: 'btn btn-primary' %>
 </span>
@@ -53,5 +57,6 @@
 
 <% else %>
   <p>Nenhum resultado com os parâmetros <%= params[:search] %></p>
+  <%= link_to 'Adicionar Novo Produto', new_product_path, class: "btn btn-link btn-sm" %><br>
   <%= link_to 'Ver estoque completo', products_path, class: "btn btn-link btn-sm" %>
 <% end %>
