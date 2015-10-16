@@ -1,0 +1,16 @@
+<h1>Produtos Adicionados</h1>
+<% if session[:cart] %>
+	<%= link_to "Esvaziar Carrinho", clear_path %>
+<% end %>
+<ul>
+<% @cart.each do |id, quantity| %>
+	<% product = Product.find(id) %>
+	
+	<li>
+		<p>Marca: <%= product.brand %></p>
+		<p>Tipo: <%= product.product_type %></p>
+		<p>Quantidade: <%= quantity %></p>
+		<p>Preço: <%= number_to_currency(product.price, :unit => 'R$') %></p>
+	</li>
+<% end %>
+</ul>
