@@ -16,9 +16,19 @@
       
 
       <ul class="nav navbar-nav navbar-right">
-      
+	  <% cartCount = 0 %>
+      <% if session[:cart] %>
+	  
+	  	<% cart = session[:cart] %>
+		<% cart.each do |id, quantity| %>
+			<% cartCount += quantity %>
+		<% end %>
+	  
+	  <% end %>
+	  
       <% if user_signed_in? %>
-      
+      	
+		<li><%= link_to "Carrinho (#{cartCount})", cart_index_path %></li>
         <li><%= link_to "Consultar Estoque", products_path %></li>
 		<li><%= link_to "Consultar Clientes", clients_path %></li>
         <li><a href="#">Realizar Venda</a></li>
