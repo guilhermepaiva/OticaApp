@@ -63,9 +63,13 @@
       <td><%= product.size %></td>
       <td><%= product.gender %></td>
       <td><%= product.product_type %></td>
-      <td>R$ <%= product.price %></td>
+      <td><%= number_to_currency(product.price, :unit => 'R$') %></td>
       <td><p class="btn btn-default"><%= link_to "Detalhes", product %></p></td>
-	  <td><p class="btn btn-default"><%= link_to "Add", add_path(product) %></p></td>
+	  <% if params[:page] %>
+	  	<td><p class="btn btn-default"><%= link_to "Add", add_path(product, params[:page]) %></p></td>
+	  <% else %>
+	  	<td><p class="btn btn-default"><%= link_to "Add", add_path(product, "1") %></p></td>
+	  <% end %>
 	  <% if session[:cart] %>
 	  	<% cart = session[:cart]%>
 	 	<td><%=  cart["#{product.id}"] %></td>

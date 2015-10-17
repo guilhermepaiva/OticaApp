@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     root 'products#index', as: :subdomain_root
     get 'choose', to: 'orders#choose_products'
     get 'clear', to: 'cart#clear'
-    get 'add/:id', to: 'cart#add', as: 'add'
+    get 'add/:id/:page', to: 'cart#add', as: 'add'
   end
 
   constraints(SubdomainBlank) do

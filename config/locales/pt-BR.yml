@@ -1,37 +1,42 @@
 pt-BR:
 
-devise:
-  confirmations:
-   new:
-    title: Reenviar instruções de confirmação
-    submit: Reenviar instruções de confirmação
-
-en:
-  will_paginate:
-    previous_label: "&#8592; Anterior"
-    next_label: "Próximo &#8594;"
-    page_gap: "&hellip;"
-
-activerecord:
-   models:
-    user: "Usuario"
-    account: "Conta"
-    product: "Produto"
-    client: "Cliente"
-   attributes:
-    user:
-     email: "E-mail"
-     password: "Senha"
-     password_confirmation: "Confirmar Senha"
-     current_password: "Senha Atual"
-     remember_me: "Lembrar de mim"
-    account:
-     subdomain: "Subdominio"
-     company_name: "Nome da Otica"
-
-forms:
-   messages:
-    success: "sucesso"
-   buttons:
-    edit: "Editar"
-    submit: "Criar"
+  devise:
+    confirmations:
+     new:
+      title: Reenviar instruções de confirmação
+      submit: Reenviar instruções de confirmação
+  
+  en:
+    will_paginate:
+      previous_label: "&#8592; Anterior"
+      next_label: "Próximo &#8594;"
+      page_gap: "&hellip;"
+  
+  activerecord:
+     models:
+      user: "Usuario"
+      account: "Conta"
+      product: "Produto"
+      client: "Cliente"
+     attributes:
+      user:
+       email: "E-mail"
+       password: "Senha"
+       password_confirmation: "Confirmar Senha"
+       current_password: "Senha Atual"
+       remember_me: "Lembrar de mim"
+      account:
+       subdomain: "Subdominio"
+       company_name: "Nome da Otica"
+  
+  forms:
+     messages:
+      success: "sucesso"
+     buttons:
+      edit: "Editar"
+      submit: "Criar"
+  
+  products:
+      new:
+          title: "Novo Produto"
+  
