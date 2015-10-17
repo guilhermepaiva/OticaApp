@@ -12,7 +12,15 @@ class OrdersController < ApplicationController
   def create
     cart = session[:cart]
     cart.each do |id, quantity|
-      Order.create!(user_id: current_user.id, client_id: params[:order][:client], product_id: id, quantity: quantity)
+      # Quando o estoque for implementado:
+      # product = Product.find(id)
+      # stock = product.quantity - quantity
+      # product.update_attribute(:quantity, stock)
+      if !Order.create!(user_id: current_user.id, client_id: params[:order][:client], product_id: id, quantity: quantity)
+        respond_to do |format|
+          format.html { render :new}
+        end
+      end
     end
     session[:cart] = nil
     respond_to do |format|

@@ -5,19 +5,19 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.where(nil) # cria um scope anônimo (todos os produtos)
+    @products = Product.paginate(:page => params[:page], :per_page => 5)
     @products = @products.gender(params[:gender]) if params[:gender].present?
     @products = @products.brand(params[:brand]) if params[:brand].present?
     @products = @products.product_type(params[:product_type]) if params[:product_type].present?
     @products = @products.price_max(params[:price_max]) if params[:price_max].present?
     @products = @products.price_min(params[:price_min]) if params[:price_min].present?
-    @products = Product.paginate(:page => params[:page], :per_page => 5)
     
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @products = Product.find(params[:id])
+    
   end
 
   # GET /products/new
