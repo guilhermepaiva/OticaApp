@@ -18,6 +18,8 @@ gem 'bootstrap-sass'
 gem 'apartment'
 gem 'i18n'
 gem 'rails-i18n'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'byebug'
