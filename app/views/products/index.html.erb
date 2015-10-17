@@ -65,7 +65,7 @@
       <td><%= product.product_type %></td>
       <td>R$ <%= product.price %></td>
       <td><p class="btn btn-default"><%= link_to "Detalhes", product %></p></td>
-	  <td><p class="btn btn-default"><%= link_to "Add", "add/#{product.id}" %></p></td>
+	  <td><p class="btn btn-default"><%= link_to "Add", add_path(product) %></p></td>
 	  <% if session[:cart] %>
 	  	<% cart = session[:cart]%>
 	 	<td><%=  cart["#{product.id}"] %></td>
