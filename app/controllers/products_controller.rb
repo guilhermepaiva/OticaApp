@@ -12,13 +12,12 @@ class ProductsController < ApplicationController
     @products = @products.price_max(params[:price_max]) if params[:price_max].present?
     @products = @products.price_min(params[:price_min]) if params[:price_min].present?
     
-    
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @products = Product.find(params[:id])
+    
   end
 
   # GET /products/new
