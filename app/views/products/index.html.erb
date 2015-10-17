@@ -78,6 +78,9 @@
   <% end %>
 </tbody>
 </table>
+<div class="text-center">
+  <%= will_paginate @products, :previous_label => 'Anterior', :next_label => 'Próximo', renderer: BootstrapPagination::Rails %>
+</div>
 </div>
 
 <div class="row">
