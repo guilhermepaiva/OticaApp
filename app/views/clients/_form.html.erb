@@ -1,16 +1,45 @@
+<form class="col-md-8 col-md-offset-2">
 <%= simple_form_for(@client) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :age %>
-    <%= f.input :cpf %>
-    <%= f.input :rg %>
-    <%= f.input :adress %>
-    <%= f.input :rate %>
+    <div class="form-group">
+      <%= f.label :name, "Nome do Cliente:" %>
+      <%= f.input :name, label: false %>
+    </div>
+
+    <div class="form-inline">
+      <div class="form-group">
+      <%= f.label :age, "Idade:" %>
+      <%= f.input :age, label: false %>
+      </div>
+    
+      <div class="form-group">
+      <%= f.label :cpf, "CPF:" %>
+      <%= f.input :cpf, label: false %>
+      </div>
+  
+      <div class="form-group">
+      <%= f.label :rg, "RG:" %>
+      <%= f.input :rg, label: false %>
+      </div>
+    
+    </div>
+
+    <div class="form-group">
+      <%= f.label :adress, "Endereço do Cliente:" %>
+      <%= f.input :adress, label: false %>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :rate %>
+    </div>
+
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary pull-right" %>
   </div>
+  <%= link_to 'Voltar', clients_path %>
 <% end %>
+</form>

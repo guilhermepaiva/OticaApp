@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Clients</h1>
+<h1>Seus Clientes</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Cpf</th>
-      <th>Rg</th>
-      <th>Adress</th>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>CPF</th>
+      <th>RG</th>
+      <th>Endereço</th>
       <th>Rate</th>
       <th colspan="3"></th>
     </tr>
@@ -24,9 +24,9 @@
         <td><%= client.rg %></td>
         <td><%= client.adress %></td>
         <td><%= client.rate %></td>
-        <td><%= link_to 'Show', client %></td>
-        <td><%= link_to 'Edit', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', client %></td>
+        <td><%= link_to 'Editar', edit_client_path(client) %></td>
+        <td><%= link_to 'Apagar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Client', new_client_path %>
+<%= link_to 'Novo Cliente', new_client_path %>

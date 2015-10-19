@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @client.name %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Idade:</strong>
   <%= @client.age %>
 </p>
 
 <p>
-  <strong>Cpf:</strong>
+  <strong>CPF:</strong>
   <%= @client.cpf %>
 </p>
 
 <p>
-  <strong>Rg:</strong>
+  <strong>RG:</strong>
   <%= @client.rg %>
 </p>
 
 <p>
-  <strong>Adress:</strong>
+  <strong>Endereço:</strong>
   <%= @client.adress %>
 </p>
 
@@ -31,7 +31,7 @@
 </p>
 
 <p>
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to 'Editar', edit_client_path(@client) %> |
+<%= link_to 'Voltar', clients_path %>
 </p>
 <%= link_to 'Seguir Para Venda', new_order_path(:client => @client.id) %>
