@@ -13,14 +13,26 @@
     <%= f.label :size, "Tamanho" %>
     <%= f.input :size, label: false %>
 
-    <%= f.label :gender, "Gênero (Masculino ou Feminino" %>
-    <%= f.select :gender, options_for_select(['Masculino', 'Feminino']), label: false %>
+    <div class="input-group">
+      <%= f.label :gender, "Gênero:" %>
+      <%= f.select :gender, options_for_select(['Masculino', 'Feminino']), label: false %>
+    </div>
+    <br>
+    <div class="input-group">
+      <%= f.label :product_type, "Tipo:" %>
+      <%= f.select :product_type, options_for_select(['Receituário', 'Esportivo']), label: false %>
+    </div>
+    <br>
 
-    <%= f.label :product_type, "Tipo (Receituário ou Esportivo)" %>
-    <%= f.select :product_type, options_for_select(['Receituário'], ['Esportivo']), label: false %>
+    <%= f.label :cost_price, "Preço de Custo (R$)" %>
+    <%= f.input :cost_price, class: 'form-control', label: false %>
+    
 
-    <%= f.label :price, "Preço de Venda" %>
+    <%= f.label :price, "Preço de Venda (R$)" %>
     <%= f.input :price, label: false %>
+
+    <%= f.label :stock_quantity, "Quantidade em Estoque" %>
+    <%= f.input :stock_quantity, label: false %>
   </div>
 
   <div class="form-actions">
