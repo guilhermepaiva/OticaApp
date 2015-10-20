@@ -1,4 +1,4 @@
-<form class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2">
 <%= simple_form_for(@client) do |f| %>
   <%= f.error_notification %>
 
@@ -40,6 +40,6 @@
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary pull-right" %>
   </div>
-  <%= link_to 'Voltar', clients_path %>
+  <%= link_to 'Voltar', clients_path, class: "btn btn-primary pull-left" %>
 <% end %>
-</form>
+</div>

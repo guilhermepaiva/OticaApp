@@ -32,6 +32,7 @@ class ClientsController < ApplicationController
         format.json { render :show, status: :created, location: @client }
       else
         format.html { render :new }
+        puts "deu erro"
         format.json { render json: @client.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +70,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :age, :cpf, :rg, :adress, :rate)
+      params.require(:client).permit(:name, :age, :cpf, :rg, :p, :rate)
     end
 end

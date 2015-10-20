@@ -1,22 +1,29 @@
-<h1>New Order</h1>
+<div class="panel panel-default">
 
-<p>Usuário: <%= @user.name %> (#<%= @user.id %>)</p>
-<p>Cliente: <%= @client.name %> (#<%= @client.id %>)</p>
+	<div class="panel-heading"><h1 class="text-center">Finalizando Venda</h1></div>
 
-<% if session[:cart] %>
-	<%= simple_form_for(@order) do |f| %>
-  		<%= f.error_notification %>
+	<div class="panel-body">
+		<h4>Vendedor: <%= @user.name %> (#<%= @user.id %>)</h4>
+		<h4>Cliente: <%= @client.name %> (#<%= @client.id %>)</h4>
 
-  	  <%= f.hidden_field :client, :value => @client.id %>
+		<% if session[:cart] %>
 
-  	<div class="form-actions">
-    	<%= f.button :submit, class: "btn btn-primary" %>
+			<%= simple_form_for(@order) do |f| %>
+			  	<%= f.error_notification %>
+
+			  	<%= f.hidden_field :client, :value => @client.id %>
+
+			  	<div class="form-actions">
+			    	<%= f.button :submit, "Confirmar Venda", class: "btn btn-primary" %>
+				</div>
+				<%= link_to 'Voltar', clients_path %>
+				<%= link_to 'Escolha os Produtos', '/choose'%>
+			<%end%>
 	</div>
-	<%= link_to 'Back', clients_path %>
-	<%= link_to 'Escolha os Produtos', '/choose'%>
-	<%end%>
-	
-<%else%>
-<p>Favor adicionar produtos antes de efetuar uma venda</p>
+		
+		<%else%>
+			<p>Favor adicionar produtos antes de efetuar uma venda!</p>
 
-<%end%>
+		<%end%>
+
+</div>

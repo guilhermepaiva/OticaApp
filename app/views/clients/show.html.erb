@@ -1,37 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @client.name %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1 class="text-center">Detalhes do Cliente</h1></div> 
+  <h4 class="text-center">Confira os dados do cliente antes de prosseguir com a venda</h4> 
+    <div class="panel-body">  
+      <p>
+        <strong>Nome:</strong>
+        <%= @client.name %>
+      </p>
 
-<p>
-  <strong>Idade:</strong>
-  <%= @client.age %>
-</p>
+      <p>
+        <strong>Idade:</strong>
+        <%= @client.age %>
+      </p>
 
-<p>
-  <strong>CPF:</strong>
-  <%= @client.cpf %>
-</p>
+      <p>
+        <strong>CPF:</strong>
+        <%= @client.cpf %>
+      </p>
 
-<p>
-  <strong>RG:</strong>
-  <%= @client.rg %>
-</p>
+      <p>
+        <strong>RG:</strong>
+        <%= @client.rg %>
+      </p>
 
-<p>
-  <strong>Endereço:</strong>
-  <%= @client.adress %>
-</p>
+      <p>
+        <strong>Endereço:</strong>
+        <%= @client.adress %>
+      </p>
 
-<p>
-  <strong>Rate:</strong>
-  <%= @client.rate %>
-</p>
+      <p>
+        <strong>Rate:</strong>
+        <%= @client.rate %>
+      </p>
 
-<p>
-<%= link_to 'Editar', edit_client_path(@client) %> |
-<%= link_to 'Voltar', clients_path %>
-</p>
-<%= link_to 'Seguir Para Venda', new_order_path(:client => @client.id) %>
+      <p>
+      <%= link_to 'Editar', edit_client_path(@client) %> |
+      <%= link_to 'Voltar', clients_path %>
+      </p>
+      <%= link_to 'Seguir Para Venda', new_order_path(:client => @client.id), class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>

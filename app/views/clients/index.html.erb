@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Seus Clientes</h1>
+<h1 class="text-center">Seus Clientes</h1>
 
-<table>
+<h4>Se o cliente estiver cadastrado clique em <strong>Escolher</strong> para continuar com a venda. Ou então cadastre um novo cliente.</h4>
+
+<table class="table table-hover table-bordered text-center">
   <thead>
     <tr>
       <th>Nome</th>
@@ -24,7 +26,7 @@
         <td><%= client.rg %></td>
         <td><%= client.adress %></td>
         <td><%= client.rate %></td>
-        <td><%= link_to 'Exibir', client %></td>
+        <td><%= link_to 'Escolher', client %></td>
         <td><%= link_to 'Editar', edit_client_path(client) %></td>
         <td><%= link_to 'Apagar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -34,4 +36,4 @@
 
 <br>
 
-<%= link_to 'Novo Cliente', new_client_path %>
+<%= link_to 'Cadastrar Novo Cliente', new_client_path %>
