@@ -1,0 +1,43 @@
+<% if @orders.present? %>
+<div class="panel panel-default">
+	<div class="panel-heading"><h1 class="text-center">Relatório de Vendas</h1></div>
+
+	<table class="table table-hover table-bordered text-center">
+
+		<thead>
+			<tr>
+				<th class="text-center">Nome do Vendedor</th>
+				<th class="text-center">Marca do Produto</th>
+				<th class="text-center">Quantidade Vendida</th>
+				<th class="text-center">Preço de Venda</th>
+				<th class="text-center">Data da Venda</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			
+			<% @orders.each do |order| %>
+				<tr>
+					<td><%= order.user.name %></td>
+					<td><%= order.product.brand %></td>
+					<td><%= order.quantity %></td>
+					<td>R$ <%= order.product.price %></td>
+					<td><%= order.created_at.strftime("%d/%m/%Y") %></td>
+			<% end %>
+				</tr>
+
+		</tbody>
+
+	</table>
+	
+
+</div>
+<br>
+
+<div>
+	<%= link_to "Página Inicial", products_path, class: 'btn btn-primary' %>
+</div>
+
+<% else %>
+<h3>Você não realizou nenhuma venda.</h3>
+<% end %>

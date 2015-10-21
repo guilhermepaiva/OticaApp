@@ -1,5 +1,10 @@
 class OrdersController < ApplicationController
-  
+
+  def index 
+    @orders = Order.all
+  end
+
+
   def new
     @user = current_user
     @client = Client.find(params[:client])
@@ -14,8 +19,8 @@ class OrdersController < ApplicationController
     cart.each do |id, quantity|
       # Quando o estoque for implementado:
       product = Product.find(id)
-      # stock = product.quantity - quantity
-      # product.update_attribute(:quantity, stock)
+      stock_decremented = product.stock_quantity - quantity
+      product.update_attribute(:stock_quantity, stock_decremented)
       if !Order.create!(user_id: current_user.id, client_id: params[:order][:client], product_id: id, quantity: quantity)
         respond_to do |format|
           format.html { render :new}

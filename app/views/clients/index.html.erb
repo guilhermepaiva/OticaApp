@@ -26,9 +26,9 @@
         <td><%= client.rg %></td>
         <td><%= client.adress %></td>
         <td><%= client.rate %></td>
-        <td><%= link_to 'Escolher', client %></td>
-        <td><%= link_to 'Editar', edit_client_path(client) %></td>
-        <td><%= link_to 'Apagar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Escolher', client, class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Editar', edit_client_path(client), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Apagar', client, class: 'btn btn-danger', method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,5 @@
 
 <br>
 
-<%= link_to 'Cadastrar Novo Cliente', new_client_path %>
+<%= link_to 'Cadastrar Novo Cliente', new_client_path, class: 'btn btn-primary pull-right' %>
+<%= link_to 'Voltar', products_path, class: 'btn btn-primary pull-left' %>
