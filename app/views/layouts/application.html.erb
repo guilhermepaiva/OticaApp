@@ -10,6 +10,15 @@
 
 <%= render "layouts/header" %>
 <div class="container">
+	<span class="notice_message">
+		<% flash.each do |name, msg| %>
+	    	<h4><%= content_tag :div, msg, class: "alert alert-info text-center" %></h4>
+	  	<% end %>
+  	</span>
+  	<script>
+  		setTimeout("$('.notice_message').fadeOut('slow')", 5000)
+  	</script>
+
 	<%= yield %>
 </div>
 
