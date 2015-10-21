@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
     cart = session[:cart]
     cart.each do |id, quantity|
       # Quando o estoque for implementado:
-      # product = Product.find(id)
+      product = Product.find(id)
       # stock = product.quantity - quantity
       # product.update_attribute(:quantity, stock)
       if !Order.create!(user_id: current_user.id, client_id: params[:order][:client], product_id: id, quantity: quantity)
