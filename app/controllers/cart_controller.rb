@@ -16,8 +16,22 @@ class CartController < ApplicationController
     else
       cart[id] = 1
     end
-    product = Product.find(id)
+    
     redirect_to products_path(:page => params[:page])
+  end
+  
+  def remove
+    id = params[:id]
+    
+    
+    cart = session[:cart]
+    
+    
+    if cart[id] then
+      cart.delete("#{id}")
+    end
+    
+    redirect_to cart_path
   end
   
   def clear

@@ -7,20 +7,21 @@
 		<h4>Cliente: <%= @client.name %> (#<%= @client.id %>)</h4>
 
 		<% if session[:cart] %>
-
+			<% total = 0 %>
 			<h3 class="text-center">Produtos Escolhidos</h3>
 			<% session[:cart].each do |id, amount| %>
 				<% product = Product.find(id) %>
-
+					<% total = total + (product.price * amount) %>
 					<li class="list-group-item">
 						<p>Marca: <%= product.brand %></p>
 						<p>Tipo: <%= product.product_type %></p>
 						<p>Preço: <%= number_to_currency(product.price, :unit => 'R$') %></p>
+						<p>Quantidade: <%= amount %></p>
 					</li>
 					<br>
 				
 			<% end %> 
-
+			<h4 class="text-center">TOTAL: <%= total %></h4>
 			<%= simple_form_for(@order) do |f| %>
 			  	<%= f.error_notification %>
 
