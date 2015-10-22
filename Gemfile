@@ -20,6 +20,7 @@ gem 'i18n'
 gem 'rails-i18n'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
