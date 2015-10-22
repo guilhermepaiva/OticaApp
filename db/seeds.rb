@@ -9,20 +9,20 @@
 Apartment
 Apartment::Tenant.switch('giba')
 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300
-Product.create brand: "Armani", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "Prada", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 600 
-Product.create brand: "Oakley", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "teste", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "feminino", product_type: "óculos", price: 800 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 800 
-Product.create brand: "Oakley", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 900 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "feminino", product_type: "óculos", price: 500 
-Product.create brand: "Prada", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "Armani", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 700 
-Product.create brand: "Techs", reference: "oc001", size: 30, gender: "feminino", product_type: "óculos", price: 300 
-Product.create brand: "Prada", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 200 
-Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300, cost_price: 100, stock_quantity: 30
+Product.create brand: "Armani", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Prada", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 600  ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Oakley", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "teste", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300  ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "feminino", product_type: "óculos", price: 800  ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 800 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Oakley", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 900 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "feminino", product_type: "óculos", price: 500  ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Prada", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300  ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Armani", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 700 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Techs", reference: "oc001", size: 30, gender: "feminino", product_type: "óculos", price: 300   ,cost_price: 100, stock_quantity: 30
+Product.create brand: "Prada", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300  ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 200 ,cost_price: 100, stock_quantity: 30
+Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 ,cost_price: 100, stock_quantity: 30
