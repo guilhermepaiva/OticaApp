@@ -10,15 +10,15 @@ en:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
       invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
+      locked: "Sua conta está bloqueada."
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."
-      timeout: "Your session expired. Please sign in again to continue."
+      timeout: "Sua sessão expirou. Por favor, entre na sua conta para continuar."
       unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your email address before continuing."
+      unconfirmed: "Você precisa confirmar seu endereço de email antes de continuar."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "Instruções de confirmação"
       reset_password_instructions:
         subject: "Reset password instructions"
       unlock_instructions:
