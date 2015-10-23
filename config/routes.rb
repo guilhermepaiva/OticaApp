@@ -33,8 +33,7 @@ Rails.application.routes.draw do
 
   constraints(SubdomainBlank) do
     resources :accounts, only: [:new, :create]
-    #root 'pages#home'
-    root 'www.optk.com.br'
+    root 'pages#home'
   end
 
 end
