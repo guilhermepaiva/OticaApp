@@ -13,8 +13,8 @@ private
     if account
       Apartment::Tenant.switch(account.subdomain)
     else
-     # redirect_to root_url(subdomain: false)
-     render 'pages/home'
+      redirect_to root_url(subdomain: false)
+     #render 'pages/home'
     end
   end
   
