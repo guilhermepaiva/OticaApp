@@ -9,7 +9,7 @@ private
     Apartment::Tenant.switch('public')
     return unless request.subdomain.present?
 
-    account = Account.find_by(subdomain: request.subdomain).first
+    account = Account.find_by(subdomain: request.subdomain)
     if account
       Apartment::Tenant.switch(account.subdomain)
     else
