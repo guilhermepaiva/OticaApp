@@ -83,6 +83,5 @@ Rails.application.configure do
   config.serve_static_files = true
   config.assets.initialize_on_precompile = true
   config.cache_classes = true
-  config.serve_static_assets = true
   config.assets.digest = true
 end
