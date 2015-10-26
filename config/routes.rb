@@ -32,8 +32,9 @@ Rails.application.routes.draw do
   end
 
   constraints(SubdomainBlank) do
-    resources :accounts, only: [:new, :create]
     root 'pages#home'
+    resources :accounts, only: [:new, :create]
+    get 'pages/home' => 'pages#home'
   end
 
 end
