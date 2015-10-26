@@ -9,13 +9,17 @@ private
     Apartment::Tenant.switch('public')
     return unless request.subdomain.present?
 
-    account = Account.find_by(subdomain: request.subdomain)
-    if account
-      Apartment::Tenant.switch(account.subdomain)
+    #account = Account.find_by(subdomain: request.subdomain)
+    if current_account
+      Apartment::Tenant.switch(current_account.subdomain)
     else
       redirect_to root_url(subdomain: false)
      #render 'pages/home'
     end
+  end
+
+  def current_account
+    @current_account ||= Account.find_by(subdomain: request.subdomain)
   end
   
   def after_sign_out_path_for(resource_or_scope)
