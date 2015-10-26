@@ -80,4 +80,5 @@ Rails.application.configure do
   config.action_dispatch.tld_length = 2
   
   config.assets.compile = true
+  config.serve_static_assets = true
 end
