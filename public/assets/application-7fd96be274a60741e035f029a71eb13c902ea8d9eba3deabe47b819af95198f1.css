@@ -446,4 +446,4 @@ div.field, div.actions {
 *= require font-awesome
 
 /*@import "font-awesome-sprockets";*/
-@import "font-awesome";
+@import {"font-awesome";}
