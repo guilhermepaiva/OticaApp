@@ -80,6 +80,6 @@ Rails.application.configure do
   config.action_dispatch.tld_length = 2
   config.cache_classes = true
   config.serve_static_assets = true
-  config.assets.compile = true
+  config.assets.compile = false
   config.assets.digest = true
 end
