@@ -22,6 +22,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'puma'
 gem 'rails_12factor', group: :production
+gem 'foundation-rails', '5.4.5'
 
 group :development, :test do
   gem 'byebug'
