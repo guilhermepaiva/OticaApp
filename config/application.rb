@@ -27,6 +27,6 @@ module OticaApp
     config.i18n.available_locales = [:en, :"pt-BR"]
     config.i18n.default_locale = :"pt-BR"
     config.encoding = "utf-8"
-    config.serve_static_assets = true
+    #config.serve_static_assets = true
   end
 end
