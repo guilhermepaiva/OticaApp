@@ -11,7 +11,7 @@ private
 
     #account = Account.find_by(subdomain: request.subdomain)
     if current_account
-      Apartment::Tenant.switch(current_account.subdomain)
+      Apartment::Tenant.switch!(current_account.subdomain)
     else
       redirect_to root_url(subdomain: false)
      #render 'pages/home'
