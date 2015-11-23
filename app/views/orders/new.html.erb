@@ -16,7 +16,6 @@
 						<p>Marca: <%= product.brand %></p>
 						<p>Tipo do Produto: <%= product.product_type %></p>
 						<p>Preço: <%= number_to_currency(product.price, :unit => 'R$') %></p>
-						<p>Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): <%= product.order.order_type  %></p>
 						<p>Quantidade: <%= amount %></p>
 					</li>
 					<br>
@@ -27,11 +26,10 @@
 			  	<%= f.error_notification %>
 
 			  	<%= f.hidden_field :client, :value => @client.id %>
+			  	<%= f.label :order_type, "Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): " %>
 
 			  	<div class="form-actions">
 			    	<%= f.button :submit, "Confirmar Venda", class: "btn btn-primary pull-right" %>
-
-
 				</div>
 
 
