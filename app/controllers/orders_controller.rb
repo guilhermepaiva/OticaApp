@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    @order = Order.new(order_params)
     cart = session[:cart]
     cart.each do |id, quantity|
       # Quando o estoque for implementado:
