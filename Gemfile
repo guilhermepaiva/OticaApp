@@ -20,7 +20,7 @@ gem 'i18n'
 gem 'rails-i18n'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem 'puma'
+gem 'puma', group: :production
 gem 'rails_12factor', group: :production
 gem 'foundation-rails', '5.4.5'
 
