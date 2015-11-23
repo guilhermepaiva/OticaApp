@@ -14,9 +14,9 @@
 					<% total = total + (product.price * amount) %>
 					<li class="list-group-item">
 						<p>Marca: <%= product.brand %></p>
-						<p>Tipo: <%= product.product_type %></p>
+						<p>Tipo do Produto: <%= product.product_type %></p>
 						<p>Preço: <%= number_to_currency(product.price, :unit => 'R$') %></p>
-						<p><%= product.select, options_for_select(['Cartão de Crédito', 'Dinheiro', 'Crediário']), label: false %></p>
+						<p>Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): <%= product.order_type  %></p>
 						<p>Quantidade: <%= amount %></p>
 					</li>
 					<br>
