@@ -26,7 +26,12 @@
 			  	<%= f.error_notification %>
 
 			  	<%= f.hidden_field :client, :value => @client.id %>
-			  	<%= f.label :order_type, "Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): " %>
+			  	
+			  	<div>
+			  		<%= f.label :order_type, "Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): " %>
+			  		<%= f.select :order_type, options_for_select(['Cartão de Crédito', 'Dinheiro', 'Crediário']), label: false %>
+			  	</div>
+			  	
 
 			  	<div class="form-actions">
 			    	<%= f.button :submit, "Confirmar Venda", class: "btn btn-primary pull-right" %>
