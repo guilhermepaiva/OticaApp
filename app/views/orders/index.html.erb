@@ -10,6 +10,7 @@
 				<th class="text-center">Marca do Produto</th>
 				<th class="text-center">Quantidade Vendida</th>
 				<th class="text-center">Preço de Venda</th>
+				<th class="text-center">Forma da Venda</th>
 				<th class="text-center">Data da Venda</th>
 			</tr>
 		</thead>
@@ -22,6 +23,7 @@
 					<td><%= order.product.brand %></td>
 					<td><%= order.quantity %></td>
 					<td>R$ <%= order.product.price %></td>
+					<td><%= order.order_type %></td>
 					<td><%= order.created_at.strftime("%d/%m/%Y") %></td>
 			<% end %>
 				</tr>
