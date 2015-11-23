@@ -36,6 +36,10 @@ class OrdersController < ApplicationController
   def choose_products
     @products = Product.all
   end
+
+  def order_params
+      params.require(:order).permit(:order_type)
+    end
   
   
 end
