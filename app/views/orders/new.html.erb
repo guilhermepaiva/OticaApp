@@ -16,7 +16,7 @@
 						<p>Marca: <%= product.brand %></p>
 						<p>Tipo do Produto: <%= product.product_type %></p>
 						<p>Preço: <%= number_to_currency(product.price, :unit => 'R$') %></p>
-						<p>Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): <%= product.order_type  %></p>
+						<p>Forma da Venda (Cartão de Crédito, Crediário ou Dinheiro): <%= product.orders.order_type  %></p>
 						<p>Quantidade: <%= amount %></p>
 					</li>
 					<br>
