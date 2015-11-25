@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
 
   def index 
     @orders = Order.all
-    @products = @orders.products
   end
 
 

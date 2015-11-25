@@ -23,7 +23,7 @@
 					<td><%= order.product.brand %></td>
 					<td><%= order.quantity %></td>
 					<td>R$ <%= order.product.price %></td>
-					<td><%= product.orders.order_type %></td>
+					<td><%= order.order_type %></td>
 					<td><%= order.created_at.strftime("%d/%m/%Y") %></td>
 			<% end %>
 				</tr>
