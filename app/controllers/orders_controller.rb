@@ -23,6 +23,7 @@ class OrdersController < ApplicationController
       stock_decremented = product.stock_quantity - quantity
       product.update_attribute(:stock_quantity, stock_decremented)
       if !Order.create!(user_id: current_user.id, client_id: params[:order][:client], product_id: id, quantity: quantity)
+        @order.save
         respond_to do |format|
           format.html { render :new}
         end
