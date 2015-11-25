@@ -22,13 +22,13 @@ class OrdersController < ApplicationController
       product = Product.find(id)
       stock_decremented = product.stock_quantity - quantity
       product.update_attribute(:stock_quantity, stock_decremented)
-      @order.save!
       if !Order.create!(user_id: current_user.id, client_id: params[:order][:client], product_id: id, quantity: quantity)
         respond_to do |format|
           format.html { render :new}
         end
       end
     end
+    @order.save!
     session[:cart] = nil
     respond_to do |format|
       format.html { redirect_to products_path, notice: 'Venda efetuada com sucesso!' }
