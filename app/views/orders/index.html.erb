@@ -6,6 +6,7 @@
 
 		<thead>
 			<tr>
+				<th class="text-center">Nome do Vendedor</th>
 				<th class="text-center">Marca do Produto</th>
 				<th class="text-center">Quantidade Vendida</th>
 				<th class="text-center">Preço de Venda</th>
@@ -18,6 +19,7 @@
 			
 			<% @orders.each do |order| %>
 				<tr>
+					<td><%= order.user.name %></td>
 					<td><%= order.product.brand %></td>
 					<td><%= order.quantity %></td>
 					<td>R$ <%= order.product.price %></td>

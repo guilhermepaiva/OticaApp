@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
         end
       end
     end
-    @order.save!
+    #@order.save!
     session[:cart] = nil
     respond_to do |format|
       format.html { redirect_to products_path, notice: 'Venda efetuada com sucesso!' }
